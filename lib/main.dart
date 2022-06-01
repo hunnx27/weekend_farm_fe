@@ -75,6 +75,10 @@ class _bottomNavitate extends State<homepage> {
           backgroundColor: Color.fromARGB(255, 7, 255, 160),
           selectedFontSize: 10,
           unselectedFontSize: 10,
+          currentIndex: _selectedIndex, // 현재 선택된 메뉴
+          selectedItemColor: Color.fromARGB(255, 76, 0, 253),
+          // unselectedItemColor: Colors.amber,
+          onTap: _onItemTapped,
           items: const <BottomNavigationBarItem>[
             BottomNavigationBarItem(
               icon: Icon(Icons.home),
@@ -97,11 +101,6 @@ class _bottomNavitate extends State<homepage> {
               // backgroundColor: Colors.transparent,
             ),
           ],
-          currentIndex: _selectedIndex, // 현재 선택된 메뉴
-          selectedItemColor: Color.fromARGB(255, 76, 0, 253),
-          // unselectedItemColor: Colors.amber,
-
-          onTap: _onItemTapped,
         ),
       ),
     );
